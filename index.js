@@ -3,7 +3,7 @@
 function getData(country,topic){
     document.getElementById("news").innerHTML="";
 
-    fetch("https://newsapi.org/v2/top-headlines?country="+country+"&category="+topic+"&apiKey=b50ec4554a7b41d2a206c8dc819e08ef")
+    fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${topic}&apiKey=b50ec4554a7b41d2a206c8dc819e08ef`)
     .then((response) => response.json())
     .then((data)=>{
         console.log(data)
